@@ -17,7 +17,7 @@ The following is what has worked for me.
 
 1. open Pycharm, create a new flask project
 
-1. once it set up everything
+1. once it sets up everything
     * go to VCS / Enable VCS Control Integration
     * Select Git
     * OK
@@ -29,15 +29,13 @@ The following is what has worked for me.
     * OK
     * (This is equivalent to "git add origin url-for-this-repo")
   
-1. After adding remote:
-    * go to VCS / Git / Add
-    * something might pop up about adding .idea\vcs.xml, I chose No
-    * (This is equivalent to "git add")
-
 1. after adding remote:
+    * remove app.py
+
+1. after removing app.py (source of conflict):
     * go to VCS / Git / Pull
     * click refresh button next to Remote
     * Select origin/master in Branches to merge
     * (This is equivalent to "git pull")
 
-1. Right now you should be synced with the GitHub Repo, I would suggest we create different branches for our work, otherwise if everyone's pushing to the master branch we would have to do a git pull every time someone pushes new change to the branch. TBH I haven't done it before either, but I think doing things in branches then a single session merging conflicts is probably more efficient.
+1. Right now you should be synced with the GitHub Repo, I would suggest we create different branches for our work, otherwise if everyone's pushing to the master branch we would have to do a git pull (or git rebase) every time someone pushes new change to the branch. TBH I haven't done it before either, but I think doing things in branches then a single session merging conflicts is probably more efficient.
