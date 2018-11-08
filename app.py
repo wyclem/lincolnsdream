@@ -1,3 +1,5 @@
+# If you see this line in your app.py, you're sync'd
+
 from flask import Flask
 
 app = Flask(__name__)
